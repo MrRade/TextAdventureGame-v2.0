@@ -1,5 +1,13 @@
+
+
+
 tasks{
-    register<Exec>("buildFrontend")
+    register<Exec>("buildFrontend"){
+        group = "build"
+        description = "Builds the react frontend"
+        commandLine("npx", "yarn", "build")
+    }
+
 }
 
 //tasks{
