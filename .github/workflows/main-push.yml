@@ -28,11 +28,11 @@ jobs:
         run: |
           yarn test
 
-  christianLindner:
-    name: Christian Lindner
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: lint
-        run: |
-        npx eslint ./src/
+#  christianLindner:
+#    name: Christian Lindner
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: lint
+#        run: |
+#        npx eslint ./src/
