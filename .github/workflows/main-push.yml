@@ -22,7 +22,7 @@ jobs:
 
   testFrontend:
     name: testFrontend
-    needs: [buildFrontend]
+    needs: [frontend]
     runs-on: ubuntu-latest
 
     steps:
