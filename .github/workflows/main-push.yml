@@ -24,19 +24,17 @@ jobs:
         working-directory: frontend
 
 
-#  testFrontend:
-#    name: testFrontend
-#    needs: [frontend]
-#    runs-on: ubuntu-latest
-#    defaults:
-#      working-directory: frontend
-#
-#    steps:
-#      - name: Check out repository code
-#        uses: actions/checkout@v3
-#      - run: npm
-#      - name: test
-#        run: npm test
+  testFrontend:
+    name: testFrontend
+    needs: [frontend]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: test
+        run: npm test
+        working-directory: frontend
 
 
 #  christianLindner:
