@@ -15,9 +15,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: cd /frontend
+      - run: npm
       - name: build
         run: npm run build
+        working-directory: frontend
 
   testFrontend:
     name: testFrontend
@@ -27,10 +28,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: cd /frontend
-
+      - run: npm
       - name: test
         run: npm test
+        working-directory: frontend
 
 
 #  christianLindner:
