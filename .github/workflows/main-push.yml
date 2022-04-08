@@ -12,26 +12,31 @@ jobs:
 
     runs-on: ubuntu-latest
 
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: npm
+      - name: Install npm
+        run: npm install
+        working-directory: frontend
       - name: build
         run: npm run build
         working-directory: frontend
 
-  testFrontend:
-    name: testFrontend
-    needs: [frontend]
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: npm
-      - name: test
-        run: npm test
-        working-directory: frontend
+#  testFrontend:
+#    name: testFrontend
+#    needs: [frontend]
+#    runs-on: ubuntu-latest
+#    defaults:
+#      working-directory: frontend
+#
+#    steps:
+#      - name: Check out repository code
+#        uses: actions/checkout@v3
+#      - run: npm
+#      - name: test
+#        run: npm test
 
 
 #  christianLindner:
