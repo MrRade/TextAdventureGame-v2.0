@@ -11,7 +11,7 @@ jobs:
 
   frontend:
     name: buildFrontend
-    needs: [testFrontend, christianLindner]
+    needs: [testFrontend]
     runs-on: ubuntu-latest
 
     steps:
