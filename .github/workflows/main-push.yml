@@ -13,20 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: build
         run: |
           npx yarn build
-        working-directory: ./frontend
+        working-directory: frontend
 
   testFrontend:
     name: testFrontend
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: test
         run: |
           npx yarn test
-        working-directory: ./frontend
+        working-directory: frontend
 
 #  christianLindner:
 #    name: Christian Lindner
