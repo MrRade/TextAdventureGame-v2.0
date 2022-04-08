@@ -1,13 +1,59 @@
-import React from "react";
+import React, {Suspense, useMemo, useState} from "react";
 import "./App.css";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {StartPage} from "./app/pages/StartPage";
+import {I18nextProvider} from "react-i18next";
+import i18n from "./app/i18n/i18n";
+import {QueryClient, QueryClientProvider} from "react-query";
+import {createTheme, ThemeProvider, useTheme} from "@mui/material";
+import {getModeOfLocalStorage, setModeOfLocalStorage} from "./app/mui-styles/darkmodeProvider";
+import {createMainTheme} from "./app/mui-styles/muiStyles";
+
+const queryClient = new QueryClient();
 
 function App() {
+    const [mode, setMode] = useState<"light" | "dark">(getModeOfLocalStorage());
+    const colorMode = useMemo(
+        () => ({
+            toggleColorMode: () => {
+                setModeOfLocalStorage(mode === "light" ? "dark" : "light")
+                setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+            },
+        }),
+        [mode],
+    );
 
+    const theme = useMemo(
+        () =>
+            createMainTheme(mode),
+        [mode],
+    );
     return (
-        <div>
-
-        </div>
+        <ThemeProvider theme={theme}>
+            <BrowserRouter>
+                <Suspense fallback={<LoadingScreen/>}>
+                    <I18nextProvider i18n={i18n}>
+                        <QueryClientProvider client={queryClient}>
+                            <div className="App">
+                                <Routes>
+                                    <Route path={"/"} element={<StartPage/>}/>
+                                </Routes>
+                            </div>
+                        </QueryClientProvider>
+                    </I18nextProvider>
+                </Suspense>
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }
+
+const LoadingScreen = () => {
+    return(
+      <div>
+          loading...
+      </div>
+    );
+}
+
 
 export default App;

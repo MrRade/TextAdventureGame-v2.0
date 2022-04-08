@@ -11,7 +11,7 @@
         "plugin:react-hooks/recommended"
     ],
     "rules": {
-        "no-console": "error",
+        "no-console": "off",
         "import/first": "error",
         "react/prop-types": "off"
     },
