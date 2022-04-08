@@ -29,6 +29,9 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - name: Install npm
+        run: npm install
+        working-directory: frontend
       - name: lint
         run: npx eslint .
         working-directory: frontend
