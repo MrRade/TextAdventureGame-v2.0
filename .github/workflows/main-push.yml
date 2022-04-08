@@ -5,7 +5,7 @@ on:
   [push]
 defaults:
   run:
-    working-directory: frontend
+    working-directory: ../frontend/
 
 jobs:
 
@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: build
         run: |
-          yarn build
+          npx yarn build
 
   testFrontend:
     name: testFrontend
@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: test
         run: |
-          yarn test
+          npx yarn test
 
 #  christianLindner:
 #    name: Christian Lindner
