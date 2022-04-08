@@ -18,7 +18,6 @@ jobs:
       - run: cd /frontend
       - name: build
         run: npm run build
-        working-directory: frontend
 
   testFrontend:
     name: testFrontend
