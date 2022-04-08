@@ -34,4 +34,5 @@ jobs:
 
     steps:
       - name: lint
-        eslint .
+        run: |
+        npx eslint ./src/
