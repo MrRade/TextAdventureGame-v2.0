@@ -2,19 +2,25 @@
 
 ## Branch
 
+---
+
 ### Feature
 
-feature/#[**feature-number/issue-number**]-name-of-branch
- 
-example
+feature/#[**feature-number/issue-number**]-name-of-issue
 
+**example:**
 - feature/#2-github-actions
 
 ### Bugfix
+bugfix/#[**bug-number/issue-number**]-name-of-bug
+
+
 
 ## Issue
 
-Name: meaningful name of feature or bug
+---
+
+**Name:** meaningful name of feature or bug
 
 ### Feature
 
