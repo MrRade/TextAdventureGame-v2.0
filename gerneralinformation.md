@@ -10,7 +10,7 @@ example
 
 - feature/#2-github-actions
 
-### Release
+### Bugfix
 
 ## Issue
 
