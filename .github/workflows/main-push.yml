@@ -1,0 +1,50 @@
+name: head of push
+
+on: push
+
+jobs:
+
+  frontend:
+    name: Build Frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install npm
+        run: npm install
+        working-directory: frontend
+      - name: build
+        run: npm run build
+        working-directory: frontend
+
+  christianLindner:
+    name: Christian Lindner
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install npm
+        run: npm install
+        working-directory: frontend
+      - name: lint
+        run: npx eslint .
+        working-directory: frontend
+
+#  testFrontend:
+#    name: testFrontend
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Check out repository code
+#        uses: actions/checkout@v3
+#      - name: Install npm
+#        run: npm install
+#        working-directory: frontend
+#      - name: test
+#        run: npm test
+#        working-directory: frontend
+
+
+
