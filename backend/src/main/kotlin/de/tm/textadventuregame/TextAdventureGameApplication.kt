@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class TextAdventureGameApplication
+class TextadventuregameApplication
 
 fun main(args: Array<String>) {
-    runApplication<TextAdventureGameApplication>(*args)
+    runApplication<TextadventuregameApplication>(*args)
 }
