@@ -5,8 +5,8 @@ import {StartPage} from "./app/pages/StartPage";
 import {I18nextProvider} from "react-i18next";
 import i18n from "./app/i18n/i18n";
 import {QueryClient, QueryClientProvider} from "react-query";
-import {createTheme, ThemeProvider, useTheme} from "@mui/material";
-import {getModeOfLocalStorage, setModeOfLocalStorage} from "./app/mui-styles/darkmodeProvider";
+import {ThemeProvider} from "@mui/material";
+import {ColorModeProvider, getModeOfLocalStorage, setModeOfLocalStorage} from "./app/mui-styles/darkmodeProvider";
 import {createMainTheme} from "./app/mui-styles/muiStyles";
 
 const queryClient = new QueryClient();
@@ -33,13 +33,15 @@ function App() {
             <BrowserRouter>
                 <Suspense fallback={<LoadingScreen/>}>
                     <I18nextProvider i18n={i18n}>
-                        <QueryClientProvider client={queryClient}>
-                            <div className="App">
-                                <Routes>
-                                    <Route path={"/"} element={<StartPage/>}/>
-                                </Routes>
-                            </div>
-                        </QueryClientProvider>
+                        <ColorModeProvider value={colorMode}>
+                            <QueryClientProvider client={queryClient}>
+                                <div className="App">
+                                    <Routes>
+                                        <Route path={"/"} element={<StartPage/>}/>
+                                    </Routes>
+                                </div>
+                            </QueryClientProvider>
+                        </ColorModeProvider>
                     </I18nextProvider>
                 </Suspense>
             </BrowserRouter>
@@ -48,10 +50,10 @@ function App() {
 }
 
 const LoadingScreen = () => {
-    return(
-      <div>
-          loading...
-      </div>
+    return (
+        <div>
+            loading...
+        </div>
     );
 }
 
