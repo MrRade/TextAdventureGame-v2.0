@@ -6,14 +6,14 @@ import {I18nextProvider} from "react-i18next";
 import i18n from "./app/i18n/i18n";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {ThemeProvider} from "@mui/material";
-import {ColorModeProvider, getModeOfLocalStorage, setModeOfLocalStorage} from "./app/mui-styles/darkmodeProvider";
+import {ColorModeProvider, setModeOfLocalStorage} from "./app/mui-styles/darkmodeProvider";
 import {createMainTheme} from "./app/mui-styles/muiStyles";
 import {MainBackground} from "./app/components/common/MainBackground";
 
 const queryClient = new QueryClient();
 
 function App() {
-    const [mode, setMode] = useState<"light" | "dark">(getModeOfLocalStorage());
+    const [mode, setMode] = useState<"light" | "dark">("dark");
     const colorMode = useMemo(
         () => ({
             toggleColorMode: () => {
