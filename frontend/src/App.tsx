@@ -8,6 +8,7 @@ import {QueryClient, QueryClientProvider} from "react-query";
 import {ThemeProvider} from "@mui/material";
 import {ColorModeProvider, getModeOfLocalStorage, setModeOfLocalStorage} from "./app/mui-styles/darkmodeProvider";
 import {createMainTheme} from "./app/mui-styles/muiStyles";
+import {MainBackground} from "./app/components/common/MainBackground";
 
 const queryClient = new QueryClient();
 
@@ -36,9 +37,11 @@ function App() {
                         <ColorModeProvider value={colorMode}>
                             <QueryClientProvider client={queryClient}>
                                 <div className="App">
-                                    <Routes>
-                                        <Route path={"/"} element={<StartPage/>}/>
-                                    </Routes>
+                                    <MainBackground>
+                                        <Routes>
+                                            <Route path={"/"} element={<StartPage/>}/>
+                                        </Routes>
+                                    </MainBackground>
                                 </div>
                             </QueryClientProvider>
                         </ColorModeProvider>
