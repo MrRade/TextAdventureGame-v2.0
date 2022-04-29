@@ -23,8 +23,14 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.springdoc:springdoc-openapi-ui:1.6.6")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    // testImplementation("org.testng:testng:7.5")
+    testImplementation("io.rest-assured:rest-assured:4.5.1")
+    // testImplementation("io.rest-assured:json-path:4.5.1")
+    testImplementation("io.rest-assured:xml-path:4.5.1")
+    testImplementation("org.assertj:assertj-core:3.22.0")
 }
 
 tasks.withType<KotlinCompile> {
