@@ -1,14 +1,13 @@
-import {Paper, Typography} from "@mui/material";
-import {NavBar} from "../components/common/NavBar";
-import React from 'react'
+import { Paper, Typography } from '@mui/material';
+import React from 'react';
+import { NavBar } from '../components/common/NavBar';
 
-export const StartPage = () => {
+export function StartPage() {
+  return (
+    <Paper>
+      <NavBar />
+      <Typography variant="h1">Hello World!</Typography>
 
-    return (
-        <Paper>
-            <NavBar/>
-            <Typography variant="h1">Hello World!</Typography>
-
-        </Paper>
-    )
+    </Paper>
+  );
 }
