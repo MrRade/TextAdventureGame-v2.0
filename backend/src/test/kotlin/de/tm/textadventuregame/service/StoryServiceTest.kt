@@ -31,7 +31,7 @@ class StoryServiceTest {
     }
 
     @Test
-    fun getAllStoriesTest() {
+    fun testGetAllStories() {
         val stories = listOf(
             Story(name = "Test1"),
             Story(name = "Test2")
@@ -44,7 +44,7 @@ class StoryServiceTest {
     }
 
     @Test
-    fun createStoryTest() {
+    fun testCreateStory() {
         val story = Story(name = "test")
         every {
             storyRepository.save(any())
@@ -100,7 +100,7 @@ class StoryServiceTest {
     }
 
     @Test
-    fun getNextChoiceTest() {
+    fun testGetNextChoice() {
         val storyId = UUID.randomUUID()
         val choices = listOf(
             Choice(
