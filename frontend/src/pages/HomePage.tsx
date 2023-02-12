@@ -1,8 +1,10 @@
 import React from "react";
 import {useNavigate} from "react-router";
+import {useTranslation} from "react-i18next";
 
 export const HomePage = () =>{
     const navigate = useNavigate()
+    const t = useTranslation
 
     return(
         <div className="text-center ">
