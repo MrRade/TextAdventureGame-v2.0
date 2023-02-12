@@ -5,11 +5,12 @@ export const HomePage = () =>{
     const navigate = useNavigate()
 
     return(
-        <div className="text-center">
+        <div className="text-center ">
             <button
             onClick={() =>navigate("/gamelist")}
+            className="border-solid border-white border-2 bg-zinc-700 rounded m-2 p-0.5 hover:bg-zinc-500 shadow-md shadow-gray-500"
             >
-
+                List of Games
             </button>
         </div>
     )
