@@ -13,7 +13,7 @@ export function HomePage() {
         className="border-solid border-white border-2 bg-zinc-700 rounded m-2 p-0.5 hover:bg-zinc-500 shadow-md shadow-gray-500"
         type="button"
       >
-        {t('button')}
+        {t('gameListButton')}
       </button>
     </div>
   );
