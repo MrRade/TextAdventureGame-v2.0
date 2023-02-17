@@ -14,6 +14,7 @@ function LoadingScreen() {
             loading...
         </div>
     );
+
 }
 
 function App() {
