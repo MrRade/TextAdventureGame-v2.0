@@ -9,4 +9,3 @@ _to be continued_
 ## About us
 
 The main developers are [MrRade](https://github.com/MrRade) and [Zafkiel1312](https://github.com/Zafkiel1312). 
-
