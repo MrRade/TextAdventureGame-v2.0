@@ -1,6 +1,6 @@
 # TextAdventureGame-v2.0
 
-This is the new text adventure game based on our old game. We created the old game during our studies at hszg.de.
+This is the new text adventure game based on our old game. We created the old game during our studies at [HSZG](https://www.hszg.de/).
 
 ## How it works.
 
