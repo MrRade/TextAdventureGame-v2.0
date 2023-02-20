@@ -6,7 +6,7 @@ export function GameListPage() {
   return (
     <div>
       <div className="white w-72 h-72">
-          {JSON.stringify(storyList)}
+        {JSON.stringify(storyList)}
       </div>
     </div>
   );
