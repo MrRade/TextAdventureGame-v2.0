@@ -6,7 +6,6 @@ interface story{
     name: string
 }
 
-
 interface StoryList {
     list: story[]
 }

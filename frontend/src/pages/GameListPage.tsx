@@ -1,12 +1,13 @@
 import React from 'react';
-import {useGetStoryList} from "../middleware/storyList/storyListQuery";
+import { useGetStoryList } from "../middleware/storyList/storyListQuery";
 
 export function GameListPage() {
-    const {data} = useGetStoryList()
+  const { data } = useGetStoryList();
+  console.log( data );
   return (
     <div>
       <div className="white w-72 h-72">
-          {JSON.stringify(data)}
+        Liste
       </div>
     </div>
   );

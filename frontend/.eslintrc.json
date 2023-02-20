@@ -20,7 +20,9 @@
         "@typescript-eslint/no-explicit-any": ["off"],
         "import/extensions": "off",
         "import/prefer-default-export": "off",
-        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "linebreak-style": ["error", "windows"],
+        "quotes": "off"
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {

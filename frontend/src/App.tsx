@@ -9,6 +9,7 @@ import { HomePage } from './pages/HomePage';
 import { GameListPage } from './pages/GameListPage';
 import i18n from './i18n/i18n';
 
+const queryClient = new QueryClient()
 
 function LoadingScreen() {
   return (
@@ -17,8 +18,6 @@ function LoadingScreen() {
     </div>
   );
 }
-
-const queryClient = new QueryClient()
 
 function App() {
   return (
