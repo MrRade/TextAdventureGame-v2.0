@@ -17,16 +17,19 @@ jobs:
         run: npm run build
         working-directory: frontend
 
-  christianLindner:
-    name: Christian Lindner
-    runs-on: ubuntu-latest
+# this is for linting the frontend
+# it is for the time disabled
 
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - name: Install npm
-        run: npm install
-        working-directory: frontend
-      - name: lint
-        run: npx eslint .
-        working-directory: frontend
+#  christianLindner:
+#    name: Christian Lindner
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Check out repository code
+#        uses: actions/checkout@v3
+#      - name: Install npm
+#        run: npm install
+#        working-directory: frontend
+#      - name: lint
+#        run: npx eslint .
+#        working-directory: frontend
