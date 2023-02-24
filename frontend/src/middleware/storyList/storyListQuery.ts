@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { callGetStoryList } from "./storyListCall";
 
 interface story{
@@ -11,7 +11,7 @@ interface StoryList {
 }
 
 export const useGetStoryList = () => useQuery(
-  "StoryList",
+  ['StoryList'],
   () => callGetStoryList().then(({ data }) => Promise.resolve(data)),
   { retry: 1 },
 );

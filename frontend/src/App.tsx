@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
 import { I18nextProvider } from 'react-i18next';
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { NavBar } from './components/NavBar';
 import { HomePage } from './pages/HomePage';
 import { GameListPage } from './pages/GameListPage';
