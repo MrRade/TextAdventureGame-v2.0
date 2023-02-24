@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const getNextChoiceUrl = (id: string) => `http://localhost:8080/story/getNextChoice/${id}`;
+const getNextChoiceUrl = (StoryID: string) => `http://localhost:8080/story/getNextChoice/${StoryID}`;
 
-export const callGetNextChoice = (id:string, originalNonTerminal:string, chosenTerminal:string) => axios.post(
-  getNextChoiceUrl(id),
+export const callGetNextChoice = (StoryID:string, originalNonTerminal:string, chosenTerminal:string) => axios.post(
+  getNextChoiceUrl(StoryID),
   {
     originalNonTerminal,
     chosenTerminal,
