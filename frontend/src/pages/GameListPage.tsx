@@ -1,10 +1,14 @@
 import React from 'react';
+import { useGetStoryList } from "../middleware/storyList/storyListQuery";
 
 export function GameListPage() {
+
+  const {data: storyList} = useGetStoryList();
+
   return (
     <div>
-      <div className="white text-black w-72 h-72">
-        Hallo ich bin eine Liste.
+      <div className="white w-72 h-72">
+        {JSON.stringify(storyList)}
       </div>
     </div>
   );
